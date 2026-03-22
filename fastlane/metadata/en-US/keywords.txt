@@ -1,0 +1,1 @@
+running,gps,tracker,pace,cadence,splits,route,checkpoint,cooldown,run

@@ -1,0 +1,15 @@
+{
+  "app_name": "FreePace",
+  "subtitle": "GPS Running & Route Recorder",
+  "primary_language": "English (U.S.)",
+  "bundle_id": "sawtoothdata.Run-Tracker",
+  "sku": "freepace-ios-v1",
+  "primary_category": "Health & Fitness",
+  "secondary_category": "Sports",
+  "content_rights": "Does not contain third-party content",
+  "keywords": "running,gps,tracker,pace,cadence,splits,route,checkpoint,cooldown,run",
+  "promotional_text": "Track runs with live GPS, pace splits, cool-down mode, route checkpoints, audio cues, and offline maps. Free, no ads.",
+  "pricing": "Free",
+  "in_app_purchases": "None",
+  "subscriptions": "None"
+}

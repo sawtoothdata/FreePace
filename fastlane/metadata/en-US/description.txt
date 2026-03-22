@@ -1,0 +1,36 @@
+Track your runs with precision GPS mapping, live pace and cadence data, cool-down mode, route checkpoints, and detailed split analysis — all in a clean, battery-efficient interface designed for runners.
+
+Live Run Tracking
+A 10-second countdown gets you ready, then your route is drawn in real time on the map. Get live updates on distance, pace, elapsed time, and elevation gain as you go. Pause and resume freely — Run Tracker keeps accurate records even through breaks.
+
+Pre-Run Countdown
+A 10-second countdown gives you time to pocket your phone and get set before your run begins. Tap anywhere to skip the countdown or cancel to go back.
+
+Audio Cues
+Receive spoken updates at each mile or kilometer split so you can stay informed without looking at your phone. Customize which stats are announced. Audio cues automatically adapt when you enter cool-down mode.
+
+Cool-Down Mode
+Tap the Cool Down button mid-run to separate your warm-down walk from your running stats. View running-only or total stats on the fly with a simple toggle. Your run summary automatically shows both running and total sections when cool-down is used.
+
+Detailed Split Analysis
+Review every mile or kilometer split in a clean card-style layout with color-coded accent bars highlighting your fastest and slowest segments. Each card shows pace, elevation gain/loss, cadence, and distance — with cool-down splits visually distinguished.
+
+Cadence Tracking
+Monitor your steps per minute in real time using your iPhone's built-in motion sensors. No watch or accessory required.
+
+Route Checkpoints
+Drop custom checkpoint pins along your named routes during a run. On future runs of the same route, checkpoints are automatically detected as you pass them — with green/red delta badges showing whether you're ahead or behind your benchmark time. Review all checkpoint splits in your run summary.
+
+Run History & Routes
+Browse your complete run history with search and filtering. Save frequently-run routes with custom names for easy comparison. View checkpoint pins on route detail maps and manage them with long-press to delete.
+
+GPX Export
+Export any run as a standard GPX file to share with other apps or analyze in third-party tools.
+
+Offline Ready
+Download map areas in advance for runs in areas with poor signal. Your run data is always recorded locally — no account or internet required.
+
+Dark Mode
+Full dark mode support with a muted map style that's easy on the eyes during early morning or evening runs.
+
+Run Tracker stores all data on your device. No account required. No subscriptions. No ads.
