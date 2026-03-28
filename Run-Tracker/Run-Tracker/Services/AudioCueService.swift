@@ -91,9 +91,6 @@ final class AudioCueService: NSObject {
         currentSplitDistance = splitDistance
         lastTimeIntervalCue = 0
 
-        // Activate audio session eagerly so iOS keeps the app alive in background
-        activateAudioSession()
-
         // Subscribe to split events
         splitPublisher
             .receive(on: DispatchQueue.main)
@@ -140,13 +137,8 @@ final class AudioCueService: NSObject {
 
         var parts: [String] = ["\(walkingPrefix)\(splitLabel) \(split.splitIndex)."]
 
-        if fields.contains(.totalDistance) {
-            let distStr = formatDistanceSpeech(currentDistanceMeters, unit: unit)
-            parts.append(distStr + ".")
-        }
-
         if fields.contains(.totalTime) {
-            let totalTimeStr = formatDurationSpeech(currentElapsedSeconds)
+            let totalTimeStr = formatDurationSpeech(split.totalDurationSeconds)
             parts.append("Total time: \(totalTimeStr).")
         }
 
@@ -161,7 +153,8 @@ final class AudioCueService: NSObject {
         }
 
         if fields.contains(.averagePace) {
-            let avgPaceStr = formatPaceSpeech(currentAvgPaceSecondsPerMeter, unit: unit)
+            let avgPace = split.totalDistanceMeters > 0 ? split.totalDurationSeconds / split.totalDistanceMeters : 0
+            let avgPaceStr = formatPaceSpeech(avgPace, unit: unit)
             parts.append("Average pace: \(avgPaceStr).")
         }
 
@@ -205,11 +198,6 @@ final class AudioCueService: NSObject {
         } else {
             // Always include time marker as the lead even if totalTime is off
             parts.append("\(walkingPrefix)\(formatMinutesSpeech(intervalBoundary)).")
-        }
-
-        if fields.contains(.totalDistance) {
-            let distanceStr = formatDistanceSpeech(currentDistanceMeters, unit: unit)
-            parts.append(distanceStr + ".")
         }
 
         if fields.contains(.averagePace) {
@@ -527,9 +515,9 @@ extension AudioCueService: AVSpeechSynthesizerDelegate {
             endSpeechBackgroundTask()
         }
 
-        // Keep audio session active during a run to prevent iOS from suspending
-        // the app in background. Only deactivate when no run is active.
-        if !synthesizer.isSpeaking, !isRunActive {
+        // Deactivate audio session after speech so other audio (music) resumes
+        // full volume. The app stays alive via location background mode.
+        if !synthesizer.isSpeaking {
             deactivateAudioSession()
         }
     }

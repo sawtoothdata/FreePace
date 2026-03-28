@@ -7,7 +7,6 @@ import Foundation
 
 /// Fields that can be included in split-based audio cues
 enum AudioCueField: String, CaseIterable, Identifiable {
-    case totalDistance = "totalDistance"
     case totalTime = "totalTime"
     case splitTime = "splitTime"
     case splitPace = "splitPace"
@@ -22,7 +21,6 @@ enum AudioCueField: String, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
-        case .totalDistance: return "Total Distance"
         case .totalTime: return "Total Time"
         case .splitTime: return "Split Time"
         case .splitPace: return "Split Pace"

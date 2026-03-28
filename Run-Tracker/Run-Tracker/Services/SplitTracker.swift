@@ -13,6 +13,8 @@ struct SplitSnapshot {
     let elevationGainMeters: Double
     let elevationLossMeters: Double
     let averageCadence: Double?
+    let totalDistanceMeters: Double
+    let totalDurationSeconds: Double
     let startDate: Date
     let endDate: Date
     let isPartial: Bool
@@ -78,6 +80,8 @@ final class SplitTracker {
                 elevationGainMeters: splitElevationGain,
                 elevationLossMeters: splitElevationLoss,
                 averageCadence: avgCadence,
+                totalDistanceMeters: totalDistanceMeters,
+                totalDurationSeconds: totalDurationSeconds,
                 startDate: splitStartDate,
                 endDate: now,
                 isPartial: false
@@ -118,6 +122,8 @@ final class SplitTracker {
             elevationGainMeters: splitElevationGain,
             elevationLossMeters: splitElevationLoss,
             averageCadence: avgCadence,
+            totalDistanceMeters: totalDistanceMeters,
+            totalDurationSeconds: totalDurationSeconds,
             startDate: splitStartDate,
             endDate: Date(),
             isPartial: true
